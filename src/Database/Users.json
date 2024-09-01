@@ -8,10 +8,10 @@
 	},
 	{
 		"User_id" : 2,
-		"Name" : "Asier",
+		"Name" : "asd",
 		"Licence" : 1,
-		"email" : "asier@example.com",
-		"password" : "Contraseña456!"
+		"email" : "asd",
+		"password" : "asd"
 	},
 	{
 		"User_id" : 3,

@@ -1,0 +1,67 @@
+/* Navbar.module.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e05f8; /* Color azul */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.navbarContent {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbarTitle {
+  font-family: 'Uncial Antiqua', sans-serif;
+  font-size: 2rem;
+  color: #fff; /* Color blanco */
+  margin: 0;
+}
+
+.shellIcon {
+  display: flex;
+  align-items: center;
+}
+
+.shellIcon svg {
+  fill: #0206f3; /* Color azul */
+}
+
+.navbarIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #080808; /* Color negro */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #faea0b; /* Color amarillo */
+}
+
+/* Estilos específicos para los botones en el Navbar */
+.navbarButton {
+  background-color: #fff; /* Fondo blanco */
+  border: 2px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333; /* Color del texto */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.navbarButton:hover {
+  background-color: #f0f0f0; /* Fondo gris claro al pasar el ratón */
+  border-color: #888; /* Color del borde al pasar el ratón */
+}

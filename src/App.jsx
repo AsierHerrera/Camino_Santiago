@@ -6,7 +6,6 @@ import Login from "./components/login/Login";
 import Buttons from './components/rutebotton/rutebotton';
 import Navbar from './components/navbar/navbar';
 import routes from './components/Map/routes.jsx';
-import Grid from './components/grid/Grid';
 import './styles/styles.css';
 import FormularioAnfitriones from './components/FormularioAnfitriones/FormularioAnfitriones';
 
@@ -98,13 +97,24 @@ function App() {
             {currentView === 'map' && (
               <article className="map-outer">
                 <h2>{camino}</h2>
+                <p className='texto'> 
+                   Descubre las rutas del Camino de Santiago y explora los albergues disponibles a lo largo del recorrido. 
+                  <br />
+                  Al hacer clic en un marcador, podrás ver una descripción detallada de cada alojamiento, <br />incluyendo información útil para planificar tu viaje y asegurarte de encontrar el lugar perfecto para descansar.
+                </p> 
                 <MapWithRoutes coordinates={selectedRoute} camino={camino} />
                 <Buttons onRouteChange={handleRouteChange} />
               </article>
             )}
             {currentView === 'register' && (
+              
               <section>
                 <FormularioAnfitriones />
+                <p className='texto'> 
+                  Registra tu propio alojamiento aquí y compártelo con la comunidad. 
+                  <br />
+                  Una vez que envíes el formulario, tu alojamiento aparecerá en el mapa para que otros peregrinos puedan verlo y conocer más sobre él.
+                </p>
               </section>
             )}
             {currentView === 'grid' && (

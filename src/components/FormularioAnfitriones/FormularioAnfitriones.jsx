@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import styles from './FormularioAnfitriones.module.css';
+
 import alojamientos from "../../Database/Alojamientos.json";
 
 const Form = () => {
@@ -125,81 +127,90 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="hostalname">Nombre del hostal:</label>
-        <input
-          type="text"
-          id="hostalname"
-          name="hostalname"
-          value={hostalname}
-          onChange={handleHostalnameChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="latitud">Latitud:</label>
-        <input
-          type="text"
-          id="latitud"
-          name="latitud"
-          value={latitud}
-          onChange={handleLatitudChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="longitud">Longitud:</label>
-        <input
-          type="text"
-          id="longitud"
-          name="longitud"
-          value={longitud}
-          onChange={handleLongitudChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="precioNoche">Precio por noche:</label>
-        <input
-          type="text"
-          id="precioNoche"
-          name="precioNoche"
-          value={precioNoche}
-          onChange={handlePrecioNocheChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="camino">Camino:</label>
-        <input
-          type="text"
-          id="camino"
-          name="camino"
-          value={camino}
-          onChange={handleCaminoChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="provincia">Provincia:</label>
-        <input
-          type="text"
-          id="provincia"
-          name="provincia"
-          value={provincia}
-          onChange={handleProvinciaChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="camasTotales">Camas Totales:</label>
-        <input
-          type="text"
-          id="camasTotales"
-          name="camasTotales"
-          value={camasTotales}
-          onChange={handleCamasTotalesChange}
-        />
-      </div>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {success && <p style={{ color: 'green' }}>Formulario enviado con éxito!</p>}
-      <button type="submit">Publicar</button>
-    </form>
+    <section className={styles.formSection}>
+      <form className={styles.formContainer} onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="hostalname" className={styles.formLabel}>Nombre del hostal:</label>
+          <input
+            type="text"
+            id="hostalname"
+            name="hostalname"
+            value={hostalname}
+            onChange={handleHostalnameChange}
+            className={styles.formInput}
+          />
+        </div>
+        <div>
+          <label htmlFor="latitud" className={styles.formLabel}>Latitud:</label>
+          <input
+            type="text"
+            id="latitud"
+            name="latitud"
+            value={latitud}
+            onChange={handleLatitudChange}
+            className={styles.formInput}
+          />
+        </div>
+        <div>
+          <label htmlFor="longitud" className={styles.formLabel}>Longitud:</label>
+          <input
+            type="text"
+            id="longitud"
+            name="longitud"
+            value={longitud}
+            onChange={handleLongitudChange}
+            className={styles.formInput}
+          />
+        </div>
+        <div>
+          <label htmlFor="precioNoche" className={styles.formLabel}>Precio por noche:</label>
+          <input
+            type="text"
+            id="precioNoche"
+            name="precioNoche"
+            value={precioNoche}
+            onChange={handlePrecioNocheChange}
+            className={styles.formInput}
+          />
+        </div>
+        <div>
+          <label htmlFor="camino" className={styles.formLabel}>Camino:</label>
+          <input
+            type="text"
+            id="camino"
+            name="camino"
+            value={camino}
+            onChange={handleCaminoChange}
+            className={styles.formInput}
+          />
+        </div>
+        <div>
+          <label htmlFor="provincia" className={styles.formLabel}>Provincia:</label>
+          <input
+            type="text"
+            id="provincia"
+            name="provincia"
+            value={provincia}
+            onChange={handleProvinciaChange}
+            className={styles.formInput}
+          />
+        </div>
+        <div>
+          <label htmlFor="camasTotales" className={styles.formLabel}>Camas Totales:</label>
+          <input
+            type="text"
+            id="camasTotales"
+            name="camasTotales"
+            value={camasTotales}
+            onChange={handleCamasTotalesChange}
+            className={styles.formInput}
+          />
+        </div>
+        {error && <p className={styles.formError}>{error}</p>}
+        {success && <p className={styles.formSuccess}>Formulario enviado con éxito!</p>}
+        <button type="submit" className={styles.submitButton}>Publicar</button>
+      </form>
+    </section>
   );
 };
 

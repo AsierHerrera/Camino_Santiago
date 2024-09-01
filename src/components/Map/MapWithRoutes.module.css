@@ -1,0 +1,64 @@
+/* yourComponent.module.css */
+
+.toggleButton {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggleButton:hover {
+    background-color: #218838;
+  }
+  
+  .toggleButton:active {
+    background-color: #1e7e34;
+  }
+  
+  /* MapWithRoutes.module.css */
+
+.mapSection {
+  position: relative; /* Esto permite que los hijos se posicionen relativamente a este contenedor */
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.overlayText {
+  position: absolute;
+  top: 20px; /* Ajusta este valor según sea necesario para posicionarlo verticalmente */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  z-index: 1000; /* Asegura que esté por encima del mapa */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.toggleButton {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleButton:hover {
+  background-color: #218838;
+}
+
+.toggleButton:active {
+  background-color: #1e7e34;
+}

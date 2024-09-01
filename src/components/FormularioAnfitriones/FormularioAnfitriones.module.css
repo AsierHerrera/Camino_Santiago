@@ -1,0 +1,106 @@
+/* Form.module.css */
+
+/* Estilos generales para la sección */
+.formSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos generales para el formulario */
+.formContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width:1600px;
+}
+
+/* Estilos para las etiquetas */
+.formLabel {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos para los campos de entrada */
+.formInput {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estilos para el botón de envío */
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para mensajes de error */
+.formError {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para mensajes de éxito */
+.formSuccess {
+    color: green;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+    .formSection {
+        padding: 10px;
+    }
+
+    .formContainer {
+        padding: 15px;
+    }
+
+    .formInput, .submitButton {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    .formContainer {
+        max-width: 500px;
+        padding: 25px;
+    }
+
+    .formInput, .submitButton {
+        font-size: 18px;
+    }
+}
+
+/* Estilos para PC */
+@media (min-width: 901px) {
+    .formContainer {
+        max-width: 600px;
+        padding: 30px;
+    }
+
+    .formInput, .submitButton {
+        font-size: 18px;
+    }
+}

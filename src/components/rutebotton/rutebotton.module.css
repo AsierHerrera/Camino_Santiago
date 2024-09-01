@@ -1,0 +1,68 @@
+/* Estilos generales para todos los botones en el componente rutebotton */
+.rutebutton_button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rutebutton_button:hover {
+  background-color: #0056b3;
+}
+
+.rutebutton_button:active {
+  background-color: #003f7f;
+}
+
+/* Estilos para el contenedor de los botones en el componente rutebotton */
+.rutebutton_container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+  .rutebutton_button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 8px;
+  }
+
+  .rutebutton_container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .rutebutton_button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+  }
+
+  .rutebutton_container {
+    justify-content: space-around;
+  }
+}
+
+/* Estilos para PC */
+@media (min-width: 901px) {
+  .rutebutton_button {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 12px;
+  }
+
+  .rutebutton_container {
+    justify-content: center;
+  }
+}

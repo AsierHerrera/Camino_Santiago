@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 import alojamientos from "../../Database/Alojamientos.json";    
 import icono from "../../../public/img/greenMarker.png";
+import styles from './MapWithRoutes.module.css';  // Importa tu archivo CSS Module
+
 
 const icon = new L.Icon({
   iconUrl: icono,
@@ -35,7 +37,7 @@ const MapWithRoutes = ({ coordinates, camino }) => {
 
   return (
     <section className='map'>
-      <button onClick={toggleMarkers}>
+      <button className={styles.toggleButton} onClick={toggleMarkers}>
         {showMarkers ? 'Ocultar Albergues' : 'Mostrar Albergues'}
       </button>
       <MapContainer center={[40.43731467230963, -3.689847347507708]} zoom={6} style={{ height: '550px', width: '1000px' }}>

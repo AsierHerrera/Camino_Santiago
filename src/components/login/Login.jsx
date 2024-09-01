@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import styles from './Login.module.css';
 import usersData from "../../Database/Users.json";
 
 function Login({ onLogin }) {
@@ -121,76 +122,81 @@ function Login({ onLogin }) {
     setPasswordRepeatError('');
   };
 
-  return (
-    <section>
-      {isRegistering ? (
-        <form onSubmit={handleRegister}>
-          <div>
-            <label htmlFor="Email">Email:</label>
-            <input
-              type="text"
-              id="Email"
-              name="Email"
-              value={email}
-              onChange={handleEmailChange}
-            />
-            {emailError && <p>{emailError}</p>}
-          </div>
-          <div>
-            <label htmlFor="Password">Password:</label>
-            <input
-              type="password"
-              id="Password"
-              name="Password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            {passwordError && <p>{passwordError}</p>}
-          </div>
-          <div>
-            <label htmlFor="PasswordRepeat">Password Repeat:</label>
-            <input
-              type="password"
-              id="PasswordRepeat"
-              name="PasswordRepeat"
-              value={passwordRepeat}
-              onChange={handlePasswordRepeatChange}
-            />
-            {passwordRepeatError && <p>{passwordRepeatError}</p>}
-          </div>
-          <button type="submit">Registrarse</button>
-          <button type="button" onClick={handleToggleMode}>¿Ya tienes una cuenta? Inicia sesión aquí</button>
-        </form>
-      ) : (
-        <form onSubmit={handleLogin}>
-          <div>
-            <label htmlFor="Email">Email:</label>
-            <input
-              type="text"
-              id="Email"
-              name="Email"
-              value={email}
-              onChange={handleEmailChange}
-            />
-            {emailError && <p>{emailError}</p>}
-          </div>
-          <div>
-            <label htmlFor="Password">Password:</label>
-            <input
-              type="password"
-              id="Password"
-              name="Password"
-              value={password}
-              onChange={handlePasswordChange}
-            />
-            {passwordError && <p>{passwordError}</p>}
-          </div>
-          <button className="iniciar-sesion" type="submit">Iniciar sesión</button>
-          <button type="button" onClick={handleToggleMode}>¿No tienes una cuenta? Regístrate aquí</button>
-        </form>
-      )}
-    </section>
-  );
-}
-
-export default Login;
+    return (
+      <section className={styles.section}>
+        {isRegistering ? (
+          <form className={styles.form} onSubmit={handleRegister}>
+            <div>
+              <label className={styles.label} htmlFor="Email">Email:</label>
+              <input
+                type="text"
+                id="Email"
+                name="Email"
+                value={email}
+                onChange={handleEmailChange}
+                className={styles.input}
+              />
+              {emailError && <p className={styles.error}>{emailError}</p>}
+            </div>
+            <div>
+              <label className={styles.label} htmlFor="Password">Password:</label>
+              <input
+                type="password"
+                id="Password"
+                name="Password"
+                value={password}
+                onChange={handlePasswordChange}
+                className={styles.input}
+              />
+              {passwordError && <p className={styles.error}>{passwordError}</p>}
+            </div>
+            <div>
+              <label className={styles.label} htmlFor="PasswordRepeat">Password Repeat:</label>
+              <input
+                type="password"
+                id="PasswordRepeat"
+                name="PasswordRepeat"
+                value={passwordRepeat}
+                onChange={handlePasswordRepeatChange}
+                className={styles.input}
+              />
+              {passwordRepeatError && <p className={styles.error}>{passwordRepeatError}</p>}
+            </div>
+            <button className={styles.button} type="submit">Registrarse</button>
+            <button className={styles.toggleButton} type="button" onClick={handleToggleMode}>¿Ya tienes una cuenta? Inicia sesión aquí</button>
+          </form>
+        ) : (
+          <form className={styles.form} onSubmit={handleLogin}>
+            <div>
+              <label className={styles.label} htmlFor="Email">Email:</label>
+              <input
+                type="text"
+                id="Email"
+                name="Email"
+                value={email}
+                onChange={handleEmailChange}
+                className={styles.input}
+              />
+              {emailError && <p className={styles.error}>{emailError}</p>}
+            </div>
+            <div>
+              <label className={styles.label} htmlFor="Password">Password:</label>
+              <input
+                type="password"
+                id="Password"
+                name="Password"
+                value={password}
+                onChange={handlePasswordChange}
+                className={styles.input}
+              />
+              {passwordError && <p className={styles.error}>{passwordError}</p>}
+            </div>
+            <button className={styles.button} type="submit">Iniciar sesión</button>
+            <button className={styles.toggleButton} type="button" onClick={handleToggleMode}>¿No tienes una cuenta? Regístrate aquí</button>
+          </form>
+        )}
+      </section>
+    );
+  }
+  
+  export default Login;
